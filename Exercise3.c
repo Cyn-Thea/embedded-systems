@@ -1,3 +1,8 @@
+// Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
+// Work package 1
+// Exercise 3
+// Submission code: 14424
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> // library of the function time()

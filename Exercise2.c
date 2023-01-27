@@ -1,3 +1,8 @@
+// Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
+// Work package 1
+// Exercise 2
+// Submission code: 14424
+
 #include <stdio.h>
 #include <stdlib.h> //library about functions involving memory allocation, process control, conversions and others.
 
