@@ -6,7 +6,7 @@
 
 int main()
 {
-      int random_number, guess, count = 0; 
+      int random_number, guess, count = 0; //define the variables used in the functions later
       char c;
       srand(time(0)); // initialize the random number generator
       do{
@@ -15,7 +15,7 @@ int main()
             do // run the programs continually until it reach the defined maximum number of guesses or the user guesses the correct answer
             {
                   printf("Guess a number between 1 and 100: ");
-                  if (scanf("%d", &guess) != 1) // The expression make sure that the program doesn't break with  EOF
+                  if (scanf("%d", &guess) != 1) // The expression make sure that the program doesn't break with  EOF or other characters
                   {
                         printf("Invalid input. Please enter a number\n");
                         while ((c = getchar()) != '\n' && c != EOF) 
@@ -27,7 +27,7 @@ int main()
                         printf("Invalid input. Please enter a number between 1 and 100\n");
                         continue;
                   }
-                  count++;
+                  count++; //increase the number of the user have guessed so far
                   if (guess == random_number) // handles the response when the user guesses the correct number
                   {
                         printf("You have guessed %d times and your guess is correct\n", count);
@@ -47,7 +47,7 @@ int main()
                   printf("You have reached the maximum number of guesses. The correct number was %d\n", random_number); 
             }
             printf("Do you want to play again? (y/n): "); 
-            scanf(" %c", &c); //this scanf_s accept user input if they want to continue the game or exit
+            scanf(" %c", &c); //this scanf accept user input if they want to continue the game or exit
       } while (c == 'y'); //if the user write "y" the game will continue running
       return 0;
 }
