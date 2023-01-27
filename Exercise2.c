@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
                         ch = ch - 'z' + 'a' - 1;
                   }
                   text[i] = ch;
-            }
+            }    
       }
       printf("%s", text);
-      } while (input = getchar() != EOF); // Exit the loop if we receive EOF ("end of file") which is ctrl+z for windows
+      } while ((input = getchar()) != EOF); // Exit the loop if we receive EOF ("end of file") which is ctrl+z for windows
       return 0;
 }
