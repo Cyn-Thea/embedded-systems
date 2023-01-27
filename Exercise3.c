@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h> // library of the function time()
 
-#define MAX_NUMBER 2 // define the number of maximum number of guesses
+#define MAX_NUMBER 4 // define the number of maximum number of guesses
 
 int main()
 {
