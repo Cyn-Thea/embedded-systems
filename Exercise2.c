@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
             ch = text[i];
             if (ch >= 'A' && ch <= 'Z') //accept the uppercase input to encrypt
             {
-                  ch = ch + shift; //shift hte alphabet based on the passed shift number argument
+                  ch = ch + shift; //shift the alphabet based on the passed shift number argument
                   if (ch > 'Z')
                   {
                         ch = ch - 'Z' + 'A' - 1;
