@@ -16,12 +16,12 @@ int main(int argc, char *argv[])
             ch = text[i];
             if (ch >= 'A' && ch <= 'Z') //accept the uppercase input to encrypt
             {
-                  ch = ch + shift;
+                  ch = ch + shift; //shift hte alphabet based on the passed shift number argument
                   if (ch > 'Z')
                   {
                         ch = ch - 'Z' + 'A' - 1;
                   }
-                  text[i] = ch;
+                  text[i] = ch;// store the change in text array
             }
             else if (ch >= 'a' && ch <= 'z') //accept the lowercase input to encrypt
             {
@@ -30,10 +30,10 @@ int main(int argc, char *argv[])
                   {
                         ch = ch - 'z' + 'a' - 1;
                   }
-                  text[i] = ch;
+                  text[i] = ch; //store the change in text array
             }    
       }
-      printf("%s", text);
+      printf("%s", text); // prints the encrypted texts back to user.
       } while ((input = getchar()) != EOF); // Exit the loop if we receive EOF ("end of file") which is ctrl+z for windows
       return 0;
 }
