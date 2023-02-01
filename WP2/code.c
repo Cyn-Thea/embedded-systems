@@ -34,6 +34,8 @@ int main(int argc, char *argv[]) {
   }
  
 else 
+// pack the values together in to form 1 byte
+// use the cumulative value of resultnto calcuate the  hexadecimal value
   result = result + engine_on * pow(2, 7); // engine_on is the MSB, so we shift it to end by 7
   result = result + gear_pos * pow(2, 4); // shift gear_pos by 4
   result = result + key_pos * pow(2, 2);  // shift gear_pos by 2
