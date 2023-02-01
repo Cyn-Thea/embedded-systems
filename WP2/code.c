@@ -1,3 +1,8 @@
+// Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
+// Work package 2
+// Exercise 4.1 
+// Submission code:
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

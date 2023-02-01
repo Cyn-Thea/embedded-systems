@@ -73,7 +73,7 @@ void printfile() {
  //if the file exists
     while (fread(&ppost, sizeof(ppost), 1, filePtr)!=0)  { // loop through the database to read the people one by one while the database is not empty
     // read once, things of size ppost from the file and store them in the block of memory ppost
-    printf("%s %s %s\n",ppost.firstname, ppost.famname, ppost.pers_number); // prints all the contents of the file
+    printf("%s %s: %s\n",ppost.firstname, ppost.famname, ppost.pers_number); // prints all the contents of the file
     }  
     fclose(filePtr);//close the file to terminate the contents and links to the file to prevent accidental damage to the file
 }
@@ -127,7 +127,7 @@ void search_by_firstname(char* name) {
   }
     while (fread(&ppost, sizeof(ppost), 1, filePtr)!=0) { // Loops through all the entries in the file
         
-    if (strcmp(name, ppost.firstname) == 0) { //compares the 2 strings and If the firstname or matches the search it will print that person
+    if (strcasecmp(name, ppost.firstname) == 0) { //compares the 2 strings and If the firstname or matches the search it will print that person
 
         printf("First name: %s \nLast name: %s \nPersonal Number: %s\n",ppost.firstname, ppost.famname, ppost.pers_number); 
         found = true; // change boolean state to found
@@ -155,7 +155,7 @@ void search_by_lastname(char* name) {
   }
     while (fread(&ppost, sizeof(ppost), 1, filePtr)) { // Loops through all the entries in the file
         
-    if (strcmp(name, ppost.famname) == 0) { //compares the 2 strings and If the family name or matches the search it will print that person
+    if (strcasecmp(name, ppost.famname) == 0) { //compares the 2 strings and If the family name or matches the search it will print that person
 
         printf("First name: %s \nLast name: %s \nPersonal Number: %s\n",ppost.firstname, ppost.famname, ppost.pers_number); 
         found = true; // change boolean state to found
@@ -233,3 +233,5 @@ int main(void){
 
     return(0);     
 }  
+
+// gcc exercise3.c -o exercise3 && ./exercise3
