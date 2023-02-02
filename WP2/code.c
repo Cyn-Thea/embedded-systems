@@ -1,6 +1,6 @@
 // Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
 // Work package 2
-// Exercise 4.1 CO
+// Exercise 4.1 
 // Submission code: 6162
 
 #include <stdio.h>
