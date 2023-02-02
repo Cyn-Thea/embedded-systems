@@ -1,7 +1,9 @@
 // Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
 // Work package 2
-// Exercise 4.1
+// Exercise 1
 // Submission code: 6162
+
+
 #include <stdio.h> //include standard library for scanf, printf
 
 enum DIRECTION //define an enumerated typed DIRECTION and its values(N,E,S,W)
