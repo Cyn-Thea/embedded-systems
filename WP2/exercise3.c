@@ -1,7 +1,7 @@
 // Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
 // Work package 2
 // Exercise 3
-// Submission code: 
+// Submission code: 6162
 
 #include<stdio.h>
 #include<stdbool.h>
@@ -36,11 +36,13 @@ void write_new_file(PERSON *inrecord) {
 
     inrecord = &ppost;
     
-    // use strncpy to  copy up to n characters from the string in the 
-    // dummy data and store it in the database as a new person
-    // used -> because inrecord is a pointer
+// use strncpy to  copy up to n characters from the string in the 
+// dummy data and store it in the database as a new person
+// if the length of strut variable is less than the specified size, 
+//in this case (20 for first name and family name and 13 for ssn) 
+// the remainder of inrecord will be padded with null bytes.
     strncpy(inrecord->firstname, "Nicklas", 20); 
-    strncpy(inrecord->famname, "Bergström", 20);
+    strncpy(inrecord->famname, "Bergstrom", 20);
     strncpy(inrecord->pers_number, "8912085543", 13);
     
     filePointer = fopen(FILE_NAME, "wb+");// use the function fopen to open database.bin file in write mode.  
@@ -62,6 +64,7 @@ void printfile() {
     
     FILE* filePtr;  // Assigns the file pointer
     PERSON ppost;  // Person struct to store data being read
+    int size;  // the size of the file
     
     filePtr= fopen(FILE_NAME, "rb"); // open database.bin file in read mode
     
@@ -69,16 +72,16 @@ void printfile() {
     printf("Error: file does not exist\n");
     exit(1);
     }
- 
+
  //if the file exists
     while (fread(&ppost, sizeof(ppost), 1, filePtr)!=0)  { // loop through the database to read the people one by one while the database is not empty
-    // read once, things of size ppost from the file and store them in the block of memory ppost
+    // read the file  once, that is of size ppost and store them in the block of memory ppost
     printf("%s %s: %s\n",ppost.firstname, ppost.famname, ppost.pers_number); // prints all the contents of the file
     }  
     fclose(filePtr);//close the file to terminate the contents and links to the file to prevent accidental damage to the file
 }
     
-     //  adding more records at the end of a binary file
+     //adding more records at the end of a binary file
 void append_file(PERSON *inrecord) {
    
     FILE* filePtr;  // Assings file pointer
@@ -94,10 +97,10 @@ void append_file(PERSON *inrecord) {
     printf("Error: file does not exist\n");
     exit(1);
   }
-   // prompt user input. data will be added to the file as a new person
+   // prompt user input. data will be added at the end of the file as a new person
     printf("Enter first name: \n");
     scanf("%s", firstName); 
-    strcpy(inrecord->firstname, firstName); //copies  the firstname written by user and stores it in the file under firstname
+    strcpy(inrecord->firstname, firstName); //copies the firstname written by user and stores it in the file under firstname
     printf("Enter family name: \n");
     scanf("%s", surname);
     strcpy(inrecord->famname, surname); //copies the lastname  written by user and stores it in the file under lastname
