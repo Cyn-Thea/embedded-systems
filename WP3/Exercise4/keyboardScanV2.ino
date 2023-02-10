@@ -1,5 +1,9 @@
-#include <Keypad.h> //includes the Keypad library, which is necessary to use the Keypad class.
+// Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
+// Work package 3
+// Exercise 4
+// Submission code: B92
 
+#include <Keypad.h> //includes the Keypad library, which is necessary to use the Keypad class.
 
 /*  declare the constants ROWS and COLS to store the number of rows and columns in the keypad, respectively. ROWS is set to 4 and COLS is set to 4.  */
 const byte ROWS = 4; 

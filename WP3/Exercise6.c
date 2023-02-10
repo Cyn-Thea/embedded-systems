@@ -1,3 +1,8 @@
+// Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
+// Work package 3
+// Exercise 6
+// Submission code: B92
+
 #include <stdio.h> //standard input output header file
 #include <string.h> //string header file
 

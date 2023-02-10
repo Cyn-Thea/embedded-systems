@@ -1,3 +1,8 @@
+// Cynthia Tarwireyi, Dhanvarshinie Rajan, Kanokwan Haesatith group: 24 (2023)
+// Work package 3
+// Exercise 1 
+// Submission code: B92
+
 const int led1 = 13;   // define the first LED connected to pin 13
 const int led2 = 12;   // define the second LED connected to pin 13
 const int button = 7;  // define the button connected to pin 7
