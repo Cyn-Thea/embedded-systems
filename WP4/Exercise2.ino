@@ -12,7 +12,7 @@ volatile int flag = 0; // Variable to keep track of the interrupt flag
 void setup() { 
   Serial.begin(9600); // start the serial communication
   servoMotor.attach(servoPin); // attach the servo to the defined pin
-  attachInterrupt(digitalPinToInterrupt(servoPin), sec, CHANGE); // attaches an interrupt to the servoPin that calls the sec function when the signal changes.
+  attachInterrupt(digitalPinToInterrupt(servoPin), second, CHANGE); // attaches an interrupt to the servoPin that calls the sec function when the signal changes.
 }
 
 void loop() { 
@@ -34,6 +34,6 @@ void loop() {
 }
 
 
-void sec() {// function to handle the interrupt
+void second() {// function to handle the interrupt
   flag = !flag; //toggles the value of the flag variable when the interrupt is triggered by the sec function.
 }
