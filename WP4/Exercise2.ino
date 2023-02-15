@@ -18,7 +18,7 @@ void setup() {
 void loop() { 
   //starts a loop that iterates from i=0 to i=360 in increments of 6, and from j=0 to j=60. 
   //this loop controls the servo's position and prints the time as int i handles the degree position of the servoMotor and int j handles the the amount of movement,
-  //yy incrementing i by 6 each time, the servo will move in increments of 6 degrees, resulting in 60 movement that j will be set to, which are the seconds
+  //by incrementing i by 6 each time, the servo will move in increments of 6 degrees, resulting in 60 movement that j will be set to, which are the seconds
   for (int i = 0, j = 0; i <= 360, j <= 60; i += 6, j++) {
     if (i <= 180) {
       servoMotor.write(i);// If the servo's position is less than or equal to 180, set the servo's position to `i` . 30 times
