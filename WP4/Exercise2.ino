@@ -35,5 +35,5 @@ void loop() {
 
 
 void second() {// function to handle the interrupt
-  flag = !flag; //toggles the value of the flag variable when the interrupt is triggered by the sec function.
+  flag = !flag; //toggles the value of the flag variable when the interrupt is triggered by the second function.
 }
