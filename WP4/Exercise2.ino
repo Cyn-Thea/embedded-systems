@@ -7,7 +7,7 @@
 
 Servo servoMotor;// declare a Servo object
 int servoPin = A0; // define the pin the servo is attached to
-volatile int flag = 0; // Variable to keep track of the interrupt flag
+volatile int isInterrupted = 0; // Variable to keep track of the interrupt count
 
 void setup() { 
   Serial.begin(9600); // start the serial communication
@@ -25,9 +25,9 @@ void loop() {
     } else {
       servoMotor.write(i - 180);// if the servo's position is greater than 180, set the servo's position to `i - 180` which reset it to the starting point continue another 30 times
     } 
-    flag++; // increment the flag variable by one
-    if (flag > 0) {
-      Serial.println(j); // checks whether the flag variable is greater than 0. If it is, the current second (j) is printed to the serial monitor.
+    isInterrupted++; // increment the isInterrupted variable by one
+    if (isInterrupted > 0) {
+      Serial.println(j); // checks whether the isInterrupted variable is greater than 0. If it is, the current second (j) is printed to the serial monitor.
     }
     delay(1000);  // delay for 1 second before continue the loop
   }
@@ -35,5 +35,5 @@ void loop() {
 
 
 void second() {// function to handle the interrupt
-  flag = !flag; //toggles the value of the flag variable when the interrupt is triggered by the second function.
+  isInterrupted = !isInterrupted; //toggles the value of the isInterrupted variable when the interrupt is triggered by the second function.
 }
