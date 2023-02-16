@@ -33,7 +33,6 @@ void loop() {
   }
 }
 
-
 void second() {// function to handle the interrupt
   isInterrupted = !isInterrupted; //toggles the value of the isInterrupted variable when the interrupt is triggered by the second function.
 }
